@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: praktikum.BunTests
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.248 s <<< FAILURE! -- in praktikum.BunTests
+praktikum.BunTests.setsPriceUnCorrectly -- Time elapsed: 0.105 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: цена булочки некорректная ==> expected: <300.0> but was: <200.0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:102)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:775)
+	at praktikum.BunTests.setsPriceUnCorrectly(BunTests.java:36)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+praktikum.BunTests.setsPriceNegative -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: цена булочки некорректная ==> expected: <300.0> but was: <-300.0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:102)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:775)
+	at praktikum.BunTests.setsPriceNegative(BunTests.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+praktikum.BunTests.setsNameUnCorrectly -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: название булочки некорректное ==> expected: <black bun> but was: <red bun>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+	at praktikum.BunTests.setsNameUnCorrectly(BunTests.java:29)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+praktikum.BunTests.setsNameEmpty -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: название булочки некорректное ==> expected: <black bun> but was: <>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+	at praktikum.BunTests.setsNameEmpty(BunTests.java:50)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
