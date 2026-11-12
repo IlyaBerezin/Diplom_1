@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: praktikum.IngredientTests
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.051 s <<< FAILURE! -- in praktikum.IngredientTests
-praktikum.IngredientTests.getPriceUnCorrectlyTest -- Time elapsed: 0.006 s <<< FAILURE!
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.039 s <<< FAILURE! -- in praktikum.IngredientTests
+praktikum.IngredientTests.getPriceUnCorrectlyTest -- Time elapsed: 0.005 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Цена ингредиента некорректная ==> expected: <200.0> but was: <300.0>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -14,7 +14,7 @@ org.opentest4j.AssertionFailedError: Цена ингредиента некор�
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-praktikum.IngredientTests.getNameUnCorrectlyTest -- Time elapsed: 0.008 s <<< FAILURE!
+praktikum.IngredientTests.getNameUnCorrectlyTest -- Time elapsed: 0.005 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Название ингредиента некорректное ==> expected: <sausage> but was: <hot sauce>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)

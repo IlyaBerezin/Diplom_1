@@ -25,7 +25,7 @@ public class BurgerTests {
     //тест добавления ингредиента
     @Test
     void addIngredientTest() {
-        Ingredient cutlet = new Ingredient(IngredientType.FILLING, "cutlet", 100);
+        Ingredient cutlet = Mockito.mock(Ingredient.class);
         Burger burger = new Burger();
         burger.addIngredient(cutlet);
         assertEquals(true, burger.ingredients.contains(cutlet));
@@ -34,22 +34,22 @@ public class BurgerTests {
     //тест удаления ингредиента
     @Test
     void removeIngredientTest() {
-        Ingredient chili_sauce = new Ingredient(IngredientType.SAUCE, "chili sauce", 300);
-        Ingredient cutlet = new Ingredient(IngredientType.FILLING, "cutlet", 100);
+        Ingredient chili_sauce = Mockito.mock(Ingredient.class);
+        Ingredient cutlet = Mockito.mock(Ingredient.class);
 
         Burger burger = new Burger();
         burger.addIngredient(chili_sauce);
         burger.addIngredient(cutlet);
         burger.removeIngredient(0);
-        assertEquals("cutlet", burger.ingredients.get(0).getName());
+        assertEquals(cutlet, burger.ingredients.get(0));
     }
 
     //тест перемещения ингредиента
     @Test
     void moveIngredientTest() {
-        Ingredient chili_sauce = new Ingredient(IngredientType.SAUCE, "chili sauce", 300);
-        Ingredient cutlet = new Ingredient(IngredientType.FILLING, "cutlet", 100);
-        Ingredient dinosaur = new Ingredient(IngredientType.FILLING, "dinosaur", 200);
+        Ingredient chili_sauce = Mockito.mock(Ingredient.class);
+        Ingredient cutlet = Mockito.mock(Ingredient.class);
+        Ingredient dinosaur = Mockito.mock(Ingredient.class);
         Burger burger = new Burger();
         burger.addIngredient(chili_sauce);
         burger.addIngredient(cutlet);
@@ -62,10 +62,14 @@ public class BurgerTests {
     //тест расчёта цены бургера
     @Test
     void GetPriceTest() {
-        Bun bun = new Bun("black bun", 100);
-        Ingredient chili_sauce = new Ingredient(IngredientType.SAUCE, "chili sauce", 300);
-        Ingredient cutlet = new Ingredient(IngredientType.FILLING, "cutlet", 100);
-        Ingredient dinosaur = new Ingredient(IngredientType.FILLING, "dinosaur", 200);
+        Mockito.when(bun.getPrice()).thenReturn(100f);
+        Ingredient chili_sauce = Mockito.mock(Ingredient.class);
+        Mockito.when(chili_sauce.getPrice()).thenReturn(300f);
+        Ingredient cutlet = Mockito.mock(Ingredient.class);
+        Mockito.when(cutlet.getPrice()).thenReturn(100f);
+        Ingredient dinosaur = Mockito.mock(Ingredient.class);
+        Mockito.when(dinosaur.getPrice()).thenReturn(200f);
+
         Burger burger = new Burger();
         burger.setBuns(bun);
         burger.addIngredient(chili_sauce);
@@ -78,8 +82,13 @@ public class BurgerTests {
     //тест метода создания чека
     @Test
     void getReceiptTest() {
-        Bun bun = new Bun("white bun", 200);
-        Ingredient sour_cream = new Ingredient(IngredientType.SAUCE, "sour cream", 200);
+        Mockito.when(bun.getName()).thenReturn("white bun");
+        Mockito.when(bun.getPrice()).thenReturn(200f);
+
+        Ingredient sour_cream = Mockito.mock(Ingredient.class);
+        Mockito.when(sour_cream.getType()).thenReturn(IngredientType.SAUCE);
+        Mockito.when(sour_cream.getName()).thenReturn("sour cream");
+        Mockito.when(sour_cream.getPrice()).thenReturn(200f);
 
         Burger burger = new Burger();
         burger.setBuns(bun);
