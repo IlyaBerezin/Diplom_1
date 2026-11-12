@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: praktikum.IngredientTests
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.039 s <<< FAILURE! -- in praktikum.IngredientTests
+praktikum.IngredientTests.getPriceUnCorrectlyTest -- Time elapsed: 0.005 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Цена ингредиента некорректная ==> expected: <200.0> but was: <300.0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:102)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:775)
+	at praktikum.IngredientTests.getPriceUnCorrectlyTest(IngredientTests.java:48)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+praktikum.IngredientTests.getNameUnCorrectlyTest -- Time elapsed: 0.005 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Название ингредиента некорректное ==> expected: <sausage> but was: <hot sauce>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+	at praktikum.IngredientTests.getNameUnCorrectlyTest(IngredientTests.java:41)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+praktikum.IngredientTests.getTypeUnCorrectlyTest -- Time elapsed: 0.005 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Тип ингредиента некорректный ==> expected: <SAUCE> but was: <FILLING>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+	at praktikum.IngredientTests.getTypeUnCorrectlyTest(IngredientTests.java:34)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
